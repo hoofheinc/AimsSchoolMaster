@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutWebsite.cshtml";
+}
+
+@*<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>*@
+
+<section class="slider">
+	<div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000">
+
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+			<li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+			<li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>			
+		</ol>
+
+		<!-- Wrapper For Slides -->
+		<div class="carousel-inner" role="listbox">
+
+			<!-- Third Slide -->
+			<div class="item active">
+
+				<!-- Slide Background -->
+				<img src="~/Images/slider1.jpg" alt="Bootstrap Touch Slider" class="slide-image img-responsive" />
+				<div class="bs-slider-overlay"></div>
+
+				<div class="container">
+					<div class="row">
+						<!-- Slide Text Layer -->
+						<div class="slide-text slide_style_left">
+							<h1 data-animation="animated zoomInRight">Hurry....!!</h1>
+							<p data-animation="animated fadeInLeft">Get discounts for signing-up for high <br />school credit course</p>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Slide -->
+			<!-- Second Slide -->
+			<div class="item">
+
+				<!-- Slide Background -->
+				<img src="~/Images/slide_3.jpg" alt="Bootstrap Touch Slider" class="slide-image" />
+				<div class="bs-slider-overlay"></div>
+				<!-- Slide Text Layer -->
+				<div class="slide-text slide_style_left">
+					<h1 data-animation="animated flipInX">IELTS</h1>
+					<p data-animation="animated lightSpeedIn">IELTS Preparation classes starts </p>
+				</div>
+			</div>
+			<!-- End of Slide -->
+			<!-- Third Slide -->
+			<div class="item">
+
+				<!-- Slide Background -->
+				<img src="~/Images/Flyer-Summer-School.jpeg" alt="Bootstrap Touch Slider" class="slide-image" />
+				<div class="bs-slider-overlay"></div>
+				<!-- Slide Text Layer -->
+				<div class="slide-text slide_style_left">
+					<h1 data-animation="animated flipInX">Special Summer Offer</h1>
+					<p data-animation="animated lightSpeedIn"> Register for One course, Get 50% OFF on Second one. </p>
+				</div>
+			</div>
+			<!-- End of Slide -->
+
+		</div>
+		<!-- End of Wrapper For Slides -->
+		<!-- Left Control -->
+		<a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+			<span class="fa fa-angle-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+
+		<!-- Right Control -->
+		<a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+			<span class="fa fa-angle-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+
+	</div>
+</section>
+<section class="about" style="background-color: #fff">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-sm-6">
+				<div class="box">
+					<h2>AIMS High School</h2>
+					<div class="line"></div>
+					<p>Aims High School is Ministry inspected private high school located in heart of downtown Brampton offering Full time and Part time studies for grade 1-12. We have authority to grant Credit towards the Ontario Secondary School Diploma. Part time credit courses are offered during Days, Evenings, Weekends and in Summer.</p>
+				</div>
+				<div class="row">
+					<div class=" col-sm-12 box">
+
+						<asp:HyperLink runat="server" class="more" style="margin: 15px 0" NavigateUrl="javascript:;">Read more</asp:HyperLink>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img src="../../Images/1-1.png" class="img-responsive" />
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - Aimsschool</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	@Scripts.Render("~/bundles/jquery")
+
+</head>
+<body>
+	@*<form id="form1" runat="server">*@
+		<div>
+			<style>
+				.logo {
+					width: 200px;
+					position: relative;
+				}
+
+				.l-image {
+					position: absolute;
+					top: -55px;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					padding: 0px 10px;
+					z-index: 999;
+					height: 50px;
+					background-color: #fff;
+				}
+			</style>
+			<header>
+				<div class="container">
+					<div class="top hidden-xs">
+						<div class="row">
+							<div class="col-md-2"></div>
+							<div class="col-md-3 col-sm-3 hidden-xs ">
+								<div class="contact">
+									<span>BSID Number 882545.   </span>
+
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-6 ">
+								<div class="contact  ">
+									<i class="fa fa-envelope"></i>
+									<span>ahschool284@gmail.com</span>
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-6">
+								<div class="contact pull-right">
+									<i class="fa fa-phone">&nbsp;</i>
+									<span style="letter-spacing: 1px">905-497-2114</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-3 ">
+								<ul class="social">
+									<li><a href="#"><i class=" fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class=" fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class=" fa fa-google-plus"></i></a></li>
+									<li><a href="#"><i class=" fa fa-youtube"></i></a></li>
+									<li>
+										@*<i class=" fa fa-user">&nbsp;</i><a href="#" class="poplogin">Login</a>*@
+										@Html.Partial("_LoginPartial")
+										@*<asp:HyperLink runat="server" NavigateUrl="~/Account/Login"><i class=" fa fa-user">&nbsp;</i>Login</asp:HyperLink>*@
+
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav class="navbar navbar-default menubar">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<asp:HyperLink runat="server" class="navbar-brand" Style="padding: 10px" NavigateUrl="~/">
+								<div class="logo">
+									<div class="l-image">
+										<img src="~/Images/aims-logo.png" class="img-responsive" />
+										@*<style>
+												@media(min-width:400px) and (max-width:850px) {
+													.contact span {
+														font-size: 10px;
+													}
+
+													.navbar-header {
+														height: 0;
+													}
+
+													.l-image {
+														top: -20px;
+														background-color: transparent;
+													}
+
+														.l-image img {
+															width: 50%;
+														}
+
+													.fixed .l-image img {
+														margin: 0;
+														width: 50%
+													}
+												}
+											</style>*@
+									</div>
+								</div>
+							</asp:HyperLink>
+						</div>
+						<a href="#" class="blink pop">Summer Offer</a>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right  ">
+								<li>
+									@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle goals" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About AIMS <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li>
+										</li>
+										<li>
+											@*<asp:HyperLink runat="server" CssClass="goals" NavigateUrl="~/Goals.aspx">Goals</asp:HyperLink>*@
+											@Html.ActionLink("Goals", "Goals", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+										</li>
+										<li>
+											@*<asp:HyperLink runat="server" NavigateUrl="~/docs/Letter-Inspection-Report.pdf">Report</asp:HyperLink>*@
+											@Html.ActionLink("Report", "Report", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li>
+											@*<asp:HyperLink runat="server" CssClass="grade9" NavigateUrl="~/Grade9.aspx">Grade 9</asp:HyperLink>*@
+											@Html.ActionLink("Grade 9", "Grade9", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+										</li>
+										<li>
+											@*<asp:HyperLink runat="server" CssClass="grade10" NavigateUrl="~/Grade10.aspx">Grade 10</asp:HyperLink>*@
+											@Html.ActionLink("Grade 10", "Grade10", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+										</li>
+										<li>
+											@*<asp:HyperLink runat="server" CssClass="grade11" NavigateUrl="~/Grade11.aspx">Grade 11</asp:HyperLink>*@
+											@Html.ActionLink("Grade 11", "Grade11", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+										</li>
+										<li>
+											@*<asp:HyperLink runat="server" CssClass="grade12" NavigateUrl="~/Grade12.aspx">Grade 12</asp:HyperLink>*@
+											@Html.ActionLink("Grade 12", "Grade12", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+										</li>
+
+
+									</ul>
+								</li>
+								<li>
+									@*<asp:HyperLink runat="server" CssClass="policies" NavigateUrl="~/ourpolicies.aspx">Our Policies</asp:HyperLink>*@
+									@Html.ActionLink("Our Policies", "OurPolicies", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+
+								</li>
+								<li>
+									@*<asp:HyperLink runat="server" CssClass="events" NavigateUrl="~/events.aspx">News & Events</asp:HyperLink>*@
+									@Html.ActionLink("News & Events", "NewsEvents", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+								</li>
+								<li>
+									@*<asp:HyperLink runat="server" CssClass="contact" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>*@
+									@Html.ActionLink("Contact", "Contact", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+								</li>
+							</ul>
+						</div>
+						<!-- /.navbar-collapse -->
+					</div>
+					<!-- /.container-fluid -->
+				</nav>
+			</header>
+			@RenderBody()
+			<div class="container body-content">
+				
+				@*<hr />
+					<footer>
+						<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+					</footer>*@
+			</div>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-3">
+							<div class="img">
+								<img src="~/Images/aims-logo.png" style="width: 50%" />
+							</div>
+							<p>
+								We are a private high school located in heart of downtown Brampton offering part time high school credit courses in English, mathematics, science during days, evenings, nights, weekends and summer .  We also offer tutoring classes from grade 6-12 in maths, science and English.
+							</p>
+
+						</div>
+						<div class="col-md-3 col-sm-3">
+							<h4>Quick Links</h4>
+							<div class="line"></div>
+							<ul class="links">
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/" CssClass="active">Home</asp:HyperLink>
+								</li>
+
+
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="#">Courses</asp:HyperLink>
+								</li>
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/ourpolicies.aspx">Our Policies</asp:HyperLink>
+
+								</li>
+
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/events.aspx">News & Events</asp:HyperLink>
+								</li>
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-3">
+							<h4>Quick Links</h4>
+							<div class="line"></div>
+							<ul class="links">
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/Grade9.aspx">Grade 9</asp:HyperLink>
+								</li>
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/Grade10.aspx">Grade 10</asp:HyperLink>
+								</li>
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/Grade11.aspx">Grade 11</asp:HyperLink>
+								</li>
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/Grade12.aspx">Grade 12</asp:HyperLink>
+								</li>
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/Goals.aspx">Goals</asp:HyperLink>
+								</li>
+								<li>
+									<asp:HyperLink runat="server" NavigateUrl="~/docs/Letter-Inspection-Report.pdf">Report</asp:HyperLink>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 box col-sm-3">
+							<h4>Contact Info</h4>
+							<div class="line"></div>
+							<h5><i class="fa fa-map-marker">&nbsp;</i> Our address</h5>
+							<address>
+								<p>
+									284 Queen Street East, Brampton
+									<br />
+									Unit # 114,L6V1C2
+									<br />
+									<span>
+										Phone No.: 905-497-2114<br />
+										Fax No.: 905-497-4114
+									</span>
+									<br />
+									<span>Email :  ahschool284@gmail.com</span>
+								</p>
+
+							</address>
+						</div>
+					</div>
+				</div>
+
+			</footer>
+			<div class="bottom" style="background-color: black; height: 35px; line-height: 35px; text-align: center">
+				<span style="color: #0098DA">Beta version</span>
+
+			</div>
+		</div>		
+	@*</form>*@
+	<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<img src="~/Images/Flyer-Summer-School.jpeg" class="imagepreview" style="width: 100%;">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="loginmodal-container">
+				@*@Html.Partial("LoginModalPopup")*@
+				@*<h1>Login to Your Account</h1>
+				<br />
+				<form>
+					<asp:TextBox runat="server" name="user" placeholder="Username" ID="txtUserName"></asp:TextBox>
+					<asp:TextBox runat="server" TextMode="Password" name="password" placeholder="Password" ID="txtPassword"></asp:TextBox>
+					<asp:Button runat="server" name="login" class="login loginmodal-submit" id="btnlogin" Text="Login" OnClick="btnlogin_Click" />
+				</form>
+
+				<div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				</div>*@
+			</div>
+		</div>
+	</div>
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+	<script>
+
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 40) {
+				$('.menubar').addClass('fixed').css("box-shadow", "0 5px 5px #888");
+			} else {
+				$('.menubar').removeClass('fixed').css("box-shadow", "");
+			}
+		});
+		$(function () {
+			$('ul.nav li.dropdown').hover(function () {
+				$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+			},
+				function () {
+					$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+				});
+		});
+		$(function () {
+			$('.pop').on('click', function () {
+				$('#imagemodal').modal('show');
+			});
+			//$('.poplogin').on('click', function () {
+			//	$('#login-modal').modal('show');
+			//});
+		});
+	</script>
+</body>
+</html>

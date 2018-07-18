@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutWebsite.cshtml";
+}
+
+<section class="head">
+    <div class="container">
+        <div class="head-title">
+            Courses
+        </div>
+        <div class="line"></div>
+    </div>
+</section>
+<section class="about" style="background-color: transparent">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                @RenderBody();
+            </div>
+            <div class="col-md-3">
+                <style>
+                    .policy {
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+                        background-color: #f7f7f7;
+                    }
+
+                        .policy li {
+                            /*padding: 13px 13px 13px 20px;*/
+                            border-bottom: 1px solid #dfdfdf;
+                            position: relative;
+                        }
+
+                            .policy li:last-child {
+                                border: 1px solid transparent;
+                            }
+
+                            .policy li a {
+                                text-decoration: none;
+                                text-transform: capitalize;
+                                color: #444;
+                                text-transform: uppercase;
+                                display: block;
+                                padding: 13px 13px 13px 20px;
+                            }
+
+                            .policy li::before {
+                                content: '';
+                                position: absolute;
+                                width: 0px;
+                                height: 102%;
+                                left: 0;
+                                top: 0;
+                                background-color: rgb(238,67,105);
+                                transition: ease-in-out all .1s;
+                                z-index: 1;
+                            }
+
+                            .policy li:hover:before, .policy li.active:before {
+                                width: 8px;
+                            }
+
+
+                            .policy li:hover, .policy li.active {
+                                background-color: #fff;
+                            }
+                </style>
+                @*<h3>Quick links</h3>
+                <div class="line"></div>
+                <ul class="policy ">
+                    <li id="g9">
+                        @Html.ActionLink("Grade 9", "Grade9", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+                    </li>
+                    <li id="g10">
+                        @Html.ActionLink("Grade 10", "Grade10", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+                    </li>
+                    <li id="g11">
+                        @Html.ActionLink("Grade 11", "Grade11", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+                    </li>
+                    <li id="g12">
+                        @Html.ActionLink("Grade 12", "Grade12", "Home", routeValues: null, htmlAttributes: new { @class = "dropdown-toggle goals", data_icon = "gear" })
+                    </li>
+                </ul>*@
+            </div>
+        </div>
+    </div>
+</section>
+

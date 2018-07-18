@@ -1,0 +1,35 @@
+﻿
+@{
+	ViewBag.Title = "NewsEvents";
+	Layout = "~/Views/Shared/_LayoutWebsite.cshtml";
+}
+
+<section class="head">
+	<div class="container">
+		<div class="head-title">
+			Events
+
+		</div>
+		<div class="line"></div>
+	</div>
+</section>
+<section class="events">
+	<div class="container">
+		<div class="row">
+			<div class="heading">
+				<h2 class="head-title">No lateset events avialable right now.... </h2>
+				<div class="seprator">
+					@*<div class="icon">
+							<i class=" fa fa-graduation-cap fa-2x"></i>
+						</div>*@
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	$(function () {
+		$('.events').addClass("active");
+	})
+</script>
+

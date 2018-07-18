@@ -1,0 +1,308 @@
+﻿
+@{
+	ViewBag.Title = "OurPolicies";
+	Layout = "~/Views/Shared/_LayoutWebsite.cshtml";
+}
+
+<style>
+	div.bhoechie-tab-container {
+		/*z-index: 10;
+			background-color: #ffffff;
+			padding: 0 !important;
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			border: 1px solid #ddd;
+			-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+			box-shadow: 0 6px 12px rgba(0,0,0,.175);
+			-moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+			background-clip: padding-box;
+			opacity: 0.97;
+			filter: alpha(opacity=97);*/
+	}
+
+	.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+		border-color: #ED2F59;
+	}
+
+	div.bhoechie-tab-menu {
+		padding-right: 0;
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+
+		div.bhoechie-tab-menu div.list-group {
+			margin-bottom: 0;
+		}
+
+			div.bhoechie-tab-menu div.list-group > a {
+				margin-bottom: 0;
+			}
+
+				div.bhoechie-tab-menu div.list-group > a .glyphicon,
+				div.bhoechie-tab-menu div.list-group > a .fa {
+					color: #ED2F59;
+				}
+
+				div.bhoechie-tab-menu div.list-group > a:first-child {
+					border-top-right-radius: 0;
+					-moz-border-top-right-radius: 0;
+				}
+
+				div.bhoechie-tab-menu div.list-group > a:last-child {
+					border-bottom-right-radius: 0;
+					-moz-border-bottom-right-radius: 0;
+				}
+
+				div.bhoechie-tab-menu div.list-group > a.active,
+				div.bhoechie-tab-menu div.list-group > a.active .glyphicon,
+				div.bhoechie-tab-menu div.list-group > a.active .fa {
+					background-color: #ED2F59;
+					background-image: #ED2F59;
+					color: #ffffff;
+				}
+
+					div.bhoechie-tab-menu div.list-group > a.active:after {
+						content: '';
+						position: absolute;
+						left: 100%;
+						top: 50%;
+						margin-top: -13px;
+						border-left: 0;
+						border-bottom: 13px solid transparent;
+						border-top: 13px solid transparent;
+						border-left: 10px solid #ED2F59;
+					}
+
+	div.bhoechie-tab-content {
+		background-color: #ffffff;
+		/* border: 1px solid #eeeeee; */
+		padding-left: 20px;
+		padding-top: 10px;
+	}
+
+	div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
+		display: none;
+	}
+</style>
+<section class="head">
+	<div class="container">
+		<div class="head-title">
+			Our Policies
+		</div>
+		<div class="line"></div>
+	</div>
+</section>
+<section class="about " style="background-color: transparent">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12 bhoechie-tab-container">
+				<div class="col-md-3 bhoechie-tab-menu">
+					<div class="list-group" style="margin-top: 20px;">
+						@Html.ActionLink("Admission Policy", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item active text-center" })
+						@Html.ActionLink("Attendance Policy", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+						@Html.ActionLink("Policy about Academic Honesty", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+						@Html.ActionLink("Homework Policy", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+						@Html.ActionLink("Assignment Policy", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+						@Html.ActionLink("Student’s Responsibility Policy", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+						@Html.ActionLink("Student’s Achievement", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+						@Html.ActionLink("Code of Conduct School Policy", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+						@Html.ActionLink("Aims Fee Refund Policy", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+						@Html.ActionLink("Tutoring", "#", routeValues: null, htmlAttributes: new { @class = "list-group-item text-center" })
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+					<!-- flight section -->
+					<div class="bhoechie-tab-content active">
+						<div class="details">
+							<h4>Aims Admission Policy</h4>
+							<p><i class="fa fa-check">&nbsp;</i>Following documents must be provided at the time of enrollment</p>
+							<p><i class="fa fa-check">&nbsp;</i>Proof of pre requisite of the course</p>
+							<p><i class="fa fa-check">&nbsp;</i>Identification proof- e.g. passport/ driving license</p>
+							<p><i class="fa fa-check">&nbsp;</i>At the time of admission, parents/guardian will have to fill in the admission form in our office.</p>
+							<p><i class="fa fa-check">&nbsp;</i>Full payment for the course should be paid prior to commencement of the course.</p>
+							<p><i class="fa fa-check">&nbsp;</i>Parents/ guardian and student will have to go through all the policies and procedures of the school and have to follow them strictly.</p>
+							<p><i class="fa fa-check">&nbsp;</i>After successful completion of the course, report cards will be sent to the student’s Home School for updating of the OSR</p>
+						</div>
+					</div>
+					<!-- train section -->
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Aims High School Attendance Policy</h4>
+							<p><i class="fa fa-check">&nbsp;</i> A total of 110 hours in class are compulsory for earning a credit in the course. Credits will not be granted to a student without attending the required hours of class instruction. Students are responsible for their attendance for the successful completion of the course.</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i> Student’s attendance is recorded daily by teachers and reported to the front office within first 30
+								minutes of each class.
+							</p>
+							<p><i class="fa fa-check">&nbsp;</i> If a student is absent from school, he/she needs to report the office by making a phone call or emailing the school.</p>
+							<p><i class="fa fa-check">&nbsp;</i> When a student is absent from school, it is the student’s responsibility to talk to the teacher for makeup hours. </p>
+						</div>
+					</div>
+
+					<!-- hotel search -->
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Aims High School Policy about Academic Honesty:</h4>
+							<p><i class="fa fa-check">&nbsp;</i> Plagiarism is the act of stealing and publication of other’s people ideas, thoughts or expressions  and representation of them as one’s own original work. It is an act of academic dishonesty and can lead to a student’s suspension from the course.</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>Students are instructed in the very first class of each course about the “definition of plagiarism” and explained clearly the consequences if found involved in Plagiarism.
+							</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>Each student must sign a contract outlining that it is an offence to present someone else’s work as their own.
+							</p>
+							<p><i class="fa fa-check">&nbsp;</i>Plagiarism may result in a zero mark.</p>
+						</div>
+
+
+					</div>
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Aims High School Homework policy</h4>
+							<p><i class="fa fa-check">&nbsp;</i> Home work is the key component of student learning. At Aims, teachers always make sure that students are getting homework regularly.</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>Homework is another component of student’s assessment in terms of checklist, assignment or oral presentation.
+							</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>All students are expected to submit their homework prior to the next class.
+							</p>
+						</div>
+					</div>
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Aims Late/Missed Work Assignment Policy</h4>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>All students enrolled at Aims are expected to submit their assignments by due dates. Late
+								submission of student work can lead to a deduction of marks or not receiving a credit.
+							</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>Assignments are designed to assess student’s achievement in the course and reflect the
+								curriculum expectations to be met during the course.
+							</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>Students are responsible for catching up on the missed work either by contacting the teacher or a
+								peer.
+							</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>Teachers are encouraged to give a reasonable timelines to students for completing the missed
+								work (Usually a two-days window is given to submit the missed assignment).
+							</p>
+							<p><i class="fa fa-check">&nbsp;</i>Parents/guardian will be contacted if a student is consistently handing in late work.</p>
+						</div>
+
+					</div>
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Aims Student’s Responsibility Policy:</h4>
+							<p>
+								All students at Aims are responsible and accountable for their learning, learning environment and behavior and expected to follow all the policies strictly. All students are expected:
+							</p>
+							<p><i class="fa fa-check">&nbsp;</i> To enter the class on time and show readiness to learn</p>
+							<p>
+								<i class="fa fa-check"></i>Be punctual and regular in class which in turn ensures the academic success
+							</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>Submit class work on time and take responsibility his/her learning and follow the class routines
+							</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i> Treat everyone (classmates, teachers and other staff in authority) with respect and take responsibility of their actions
+							</p>
+							<p>
+								<i class="fa fa-check">&nbsp;</i>  Zero tolerance rule is applied for any kind of abusive behavior( physical, verbal, sexual ,psychological bullying, discrimination on the basis of race, culture, religion, gender, language or any attribute)
+							</p>
+						</div>
+					</div>
+
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Aims Student’s Achievement</h4>
+							<p><i class="fa fa-check">&nbsp;</i>Students are expected to study for their courses and ask questions for clarifications in their classrooms.</p>
+							<p><i class="fa fa-check">&nbsp;</i>Student academic achievement is a shared responsibility between the teachers and students.</p>
+							<p><i class="fa fa-check">&nbsp;</i>Studying and striving for high standards of achievement is the responsibility of the student.</p>
+						</div>
+					</div>
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Aims School Code of Conduct and Safe School Policy</h4>
+							<p>
+								In order to maintain and enhance an environment that is safe, welcoming, and in which teaching and
+								learning will flourish, staff and students at Aims are expected to behave in a manner that is helpful,
+								courteous, respectful, and caring. Students are encouraged to approach any staff member to report any
+								incident they believe is not acceptable. We follow a zero tolerance policy for negative, disruptive, and
+								aggressive behavior. Disciplinary procedures, including suspension where deemed appropriate, will be
+								enforced for those who do not comply with these standards. Suspension is the removal of a pupil from
+								the school, by the Head of School, for a specified period of time. Students are required to adhere to the
+								following expectations at all times. Failure to comply with these will result in disciplinary action.
+							</p>
+							<h5>Respect for Staff and Other members of School Community</h5>
+							<p>
+								Students are expected to comply with the expectations and requests of all staff members. The
+								verbal, physical or sexual abuse of any staff member will not be tolerated and could result in
+								suspension and police involvement.
+							</p>
+							<p>
+								Students must respect the rights of all members of the school community. Unacceptable
+								behavior includes: verbal assault, sexual harassment or assault, fighting, physical assault,
+								trespassing, possession or use of weapons and dangerous articles. Such behavior is dangerous
+								and will not be tolerated. Inappropriate behavior could result in police involvement and the
+								initiation of expulsion proceedings.
+							</p>
+							<h5>Sexual Harassment Policy</h5>
+							<p>
+								Aims High School is an educational community within which each member of school stands with
+								equal dignity and value. At Aims, we are committed to provide a safe, respectful and nonthreatening
+								climate for learning and working together. The school therefore, expects that all its
+								employees, students and volunteers will be free from sexual harassment. Sexual harassment is
+								contrary to the law. The school supports The Ontario Human Rights Code which explicitly
+								prohibits sexual harassment. It is the responsibility of all members of Aims School to conduct
+								themselves in accordance with this policy in order to create and maintain an environment free
+								from sexual harassment. Anyone who feels that they have been a victim of sexual harassment
+								should report this immediately to someone in authority.
+							</p>
+							<h4>Respect for Self</h4>
+							<h5>Drugs and Alcohol</h5>
+							<p>The possession and/or use of alcohol or illicit drugs on school property or at any school related event is forbidden and/or unlawful. All school functions, school-sponsored trips and celebrations such as graduation, shall be free of alcohol and illicit drugs.</p>
+							<h5>Smoking</h5>
+							<p>The school recognizes the benefits to all persons of a smoke-free environment. Therefore, smoking is banned within school buildings, in school vehicles and on all school property. Possession of tobacco products by students under-nineteen years of age is illegal.</p>
+							<h5>Proper Language</h5>
+							<p>Students are expected to use language that is appropriate to their dignity and the dignity of others. Coarse, profane or vulgar language is unacceptable</p>
+							<h4>Respect for the Safety and Property Of Others</h4>
+							<p>Many aspects of the Code of Student’s Behavior and Discipline are based on the acknowledged right of students to learn in a safe, orderly and stimulating environment Students are expected to treat with respect the property within the community, the school buildings and all items belonging to the school, other students or staff. Vandalism and theft violate the spirit of respect and will be treated as serious offences. Such acts of dishonesty can lead to suspension.</p>
+						</div>
+					</div>
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Aim's Fee Refund Policy</h4>
+							<p><i class="fa fa-check">&nbsp;</i>Parents/Guardians must send a letter,fax or email to office informing about student withdrawl.</p>
+							<p><i class="fa fa-check">&nbsp;</i>Full fees will be refunded if admission is withdrawn 15 days prior to commencement of the course.</p>
+							<p><i class="fa fa-check">&nbsp;</i>50% of fees will be refunded if admission is withdrawn within 7 days prior to commencement of the course.</p>
+							<p><i class="fa fa-check">&nbsp;</i>NO fees will be refunded after the commencement of the course.</p>
+						</div>
+					</div>
+					<div class="bhoechie-tab-content">
+						<div class="details">
+							<h4>Tutoring</h4>
+							<p><i class="fa fa-check">&nbsp;</i>Classes will be charged if there is no show on scheduled day and no informatuon regarding absence of student.</p>
+							<p><i class="fa fa-check">&nbsp;</i>Notice of absence should be made at least 6 hours before the scheduledd class, in writing.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>*@
+<script>
+	$(document).ready(function () {
+		$('.policies').addClass("active");
+
+		$("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
+			e.preventDefault();
+			$(this).siblings('a.active').removeClass("active");
+			$(this).addClass("active");
+			var index = $(this).index();
+			$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+			$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+		});
+	});
+</script>
+
